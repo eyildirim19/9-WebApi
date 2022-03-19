@@ -22,9 +22,9 @@ namespace WebApi5_MiddlewareCustom.Extensions
             return builder.UseMiddleware<MyMiddleware>();
         }
 
-        public static IApplicationBuilder UseHeaderCheckMiddleWare(this IApplicationBuilder builder)
+        public static async Task<IApplicationBuilder> UseHeaderCheckMiddleWare(this IApplicationBuilder builder)
         {
-            return builder.UseMiddleware<MyHeaderChekMiddleware>();
+           return builder.UseMiddleware<MyHeaderChekMiddleware>();
         }
 
     }
